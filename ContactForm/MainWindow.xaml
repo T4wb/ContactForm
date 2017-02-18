@@ -1,6 +1,6 @@
 ﻿<!--
-    Binnen deze applicatie wordt enkel geëxperimenteerd met XAML.
-    Er is dus geen gebruik gemaakt van de code-behind!
+    Binnen deze applicatie wordt zoveel mogelijk geëxperimenteerd met XAML.
+    Er is dus weinig gebruik gemaakt van de code-behind.
 -->
 <Window x:Class="ContactForm.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -19,6 +19,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -57,5 +58,10 @@
                  VerticalAlignment="Stretch"
                  SpellCheck.IsEnabled="True"
                  ToolTip="Typ hier de optionele notities." />
+        <Button Grid.Row="4"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                Content="Save"
+                Click="Button_Click" />
     </Grid>
 </Window>
